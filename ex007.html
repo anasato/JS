@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    input {
+      width: 50px;
+      border: 0;
+      border-radius: 5px;
+      background-color: rgb(189, 224, 255);
+      color: black;
+      padding: 5px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    #button {
+      width: 100px;
+      padding: 5px;
+      border: 0;
+      border-radius: 5px;
+      background-color: rgb(198, 255, 206);
+      color: black;
+    }
+
+    h1 {
+      padding-left: 10px;
+    }
+  </style>
+  <title>Somando números</title>
+</head>
+
+<body>
+  <h1>Somando números</h1>
+  <input type="number" name="txtn1" id="txtn1" autofocus> +
+  <input type="number" name="txtn2" id="txtn2">
+  <input id="button" type="button" value="Somar" onclick="somar()">
+  <div id="resp"></div>
+
+  <script>
+    function somar() {
+      var num1 = window.document.getElementById('txtn1');
+      var num2 = window.document.getElementById('txtn2');
+      var resp = window.document.getElementById('resp');
+      var n1 = Number(num1.value);
+      var n2 = Number(num2.value);
+      var soma = n1 + n2;
+      resp.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`
+
+    }
+  </script>
+</body>
+
+</html>
